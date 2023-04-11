@@ -1,15 +1,5 @@
 -- Configure plugins
 return {
-  {
-    "akinsho/flutter-tools.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    after = "mason-lspconfig.nvim", -- make sure to load after mason-lspconfig
-    config = function()
-      require("flutter-tools").setup {
-        lsp = astronvim.lsp.server_settings "dartls", -- get the server settings and built in capabilities/on_attach
-      }
-    end,
-  },
   { "editorconfig/editorconfig-vim" },
   { "fatih/vim-go" },
   { "golang/vscode-go" },
