@@ -34,9 +34,11 @@ return {
     -- init = { -- this table overrides highlights in all themes
     --   Normal = { bg = "#000000" },
     -- }
-    -- duskfox = { -- a table of overrides/changes to the duskfox theme
-    --   Normal = { bg = "#000000" },
-    -- },
+    onenord = { -- a table of overrides/changes to the onenord theme
+      CopilotSuggestion = {
+        fg = "#B48EAD",
+      },
+    },
   },
 
   -- Default theme configuration

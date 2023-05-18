@@ -27,4 +27,14 @@ return {
     [",s"] = { "!sort<CR>", desc = "Sort lines" },
     ["<leader>ss"] = { "!sort<CR>", desc = "Sort lines" },
   },
+  i = {
+    ["<C-l>"] = {
+      "copilot#Accept('<CR>')",
+      desc = "Accept Copilot suggestion",
+      noremap=true,
+      expr=true,
+      silent = true,
+      replace_keycodes = false,
+    },
+  },
 }

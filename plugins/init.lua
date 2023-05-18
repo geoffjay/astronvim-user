@@ -1,19 +1,19 @@
 -- Configure plugins
 return {
   { "editorconfig/editorconfig-vim" },
-  { "fatih/vim-go" },
-  { "golang/vscode-go" },
+  -- { "fatih/vim-go", lazy = false },
+  { "ray-x/go.nvim", lazy = false },
   -- { "gpanders/editorconfig.nvim" },
-  { "hashivim/vim-terraform" },
-  { "mattn/vim-goimports" },
-  { "ruanyl/vim-gh-line" },
-  { "terrastruct/d2-vim" },
-  { "tpope/vim-fugitive" },
+  { "hashivim/vim-terraform", lazy = false },
+  { "mattn/vim-goimports", lazy = false },
+  { "ruanyl/vim-gh-line", lazy = false },
+  { "terrastruct/d2-vim", lazy = false },
+  { "tpope/vim-fugitive", lazy = false },
   -- colorschemes
-  { "rmehri01/onenord.nvim" },
-  { "rebelot/kanagawa.nvim" },
-  { "folke/tokyonight.nvim" },
-  { "shaunsingh/nord.nvim" },
+  { "rmehri01/onenord.nvim", lazy = false },
+  { "rebelot/kanagawa.nvim", lazy = false },
+  { "folke/tokyonight.nvim", lazy = false },
+  { "shaunsingh/nord.nvim", lazy = false },
   -- All other entries override the require("<key>").setup({...}) call for default plugins
   ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
     -- config variable is the default configuration table for the setup function call
