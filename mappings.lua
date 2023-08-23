@@ -28,6 +28,30 @@ return {
     ["<leader>ss"] = { "!sort<CR>", desc = "Sort lines" },
   },
   i = {
+    ["<C-h>"] = {
+      "copilot#Dismiss()",
+      desc = "Dismiss Copilot suggestion",
+      noremap=true,
+      expr=true,
+      silent = true,
+      replace_keycodes = false,
+    },
+    ["<C-j>"] = {
+      "copilot#Next()",
+      desc = "Next Copilot suggestion",
+      noremap=true,
+      expr=true,
+      silent = true,
+      replace_keycodes = false,
+    },
+    ["<C-k>"] = {
+      "copilot#Previous()",
+      desc = "Previos Copilot suggestion",
+      noremap=true,
+      expr=true,
+      silent = true,
+      replace_keycodes = false,
+    },
     ["<C-l>"] = {
       "copilot#Accept('<CR>')",
       desc = "Accept Copilot suggestion",
