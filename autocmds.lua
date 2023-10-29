@@ -28,3 +28,16 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   group = "ruby_save",
   command = ":!rubocop --auto-correct %"
 })
+
+-- Add xit filetype
+vim.api.nvim_create_augroup("xit_filetype", { clear = true })
+vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
+  pattern = "*.xit",
+  group = "xit_filetype",
+  command = "set filetype=xit"
+})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*.xit",
+  group = "xit_filetype",
+  command = "setlocal shiftwidth=4 softtabstop=4 expandtab"
+})
