@@ -9,6 +9,8 @@ return {
   { "ruanyl/vim-gh-line", lazy = false },
   { "terrastruct/d2-vim", lazy = false },
   { "tpope/vim-fugitive", lazy = false },
+  { "elixir-editors/vim-elixir", lazy = false },
+  { "phoenixframework/tree-sitter-heex", lazy = false },
   -- colorschemes
   { "rmehri01/onenord.nvim", lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },

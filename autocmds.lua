@@ -41,3 +41,21 @@ vim.api.nvim_create_autocmd("FileType", {
   group = "xit_filetype",
   command = "setlocal shiftwidth=4 softtabstop=4 expandtab"
 })
+
+-- Add elixir filetype
+vim.api.nvim_create_augroup("elixir_filetype", { clear = true })
+vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
+  pattern = "*.ex,*.exs",
+  group = "elixir_filetype",
+  command = "set filetype=elixir"
+})
+vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
+  pattern = "*.eex,*.heex,*.leex,*.sface,*.lexs",
+  group = "elixir_filetype",
+  command = "set filetype=eelixir"
+})
+vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
+  pattern = "mix.lock",
+  group = "elixir_filetype",
+  command = "set filetype=elixir"
+})
