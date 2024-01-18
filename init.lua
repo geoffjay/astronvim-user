@@ -19,13 +19,14 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "onenord",
+  colorscheme = "kanagawa",
   -- other options:
   --  * tokyonight
   --  * tokyonight-night/storm/moon
   --  * kanagawa
   --  * kanagawa-wave/dragon/lotus
   --  * nord
+  --  * onenord
   --
   --  tokyonight-night & kanagawa-wave (preferred by remote ppl)
 
@@ -89,66 +90,6 @@ return {
   diagnostics = {
     virtual_text = true,
     underline = true,
-  },
-
-  -- Extend LSP configuration
-  lsp = {
-    -- enable servers that you already have installed without mason
-    servers = {
-      -- "pyright"
-      "pyright",
-      "solargraph",
-    },
-    formatting = {
-      -- control auto formatting on save
-      format_on_save = {
-        enabled = false, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
-          "go",
-          "rust",
-          "python",
-        },
-        ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
-        },
-      },
-      disabled = { -- disable formatting capabilities for the listed language servers
-        -- "sumneko_lua",
-      },
-      timeout_ms = 1000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
-    },
-    -- easily add or disable built in mappings added during LSP attaching
-    mappings = {
-      n = {
-        -- ["<leader>lf"] = false -- disable formatting keymap
-      },
-    },
-    -- add to the global LSP on_attach function
-    -- on_attach = function(client, bufnr)
-    -- end,
-
-    -- override the mason server-registration function
-    -- server_registration = function(server, opts)
-    --   require("lspconfig")[server].setup(opts)
-    -- end,
-
-    skip_setup = { "dartls" },
-
-    -- Add overrides for LSP server settings, the keys are the name of the server
-    ["server-settings"] = {
-      dartls = {
-        color = {
-          enabled = true,
-        },
-        settings = {
-          showTodos = true,
-          completeFunctionCalls = true,
-        },
-      },
-    },
   },
 
   -- LuaSnip Options

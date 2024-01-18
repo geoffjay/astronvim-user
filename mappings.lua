@@ -17,6 +17,8 @@ return {
     -- selection
     [",a"] = { "<esc>ggVG<CR>", desc = "Select everything" },
     ["<leader>sa"] = { "<esc>ggVG<CR>", desc = "Select everything" },
+    -- split line
+    ["<leader>sl"] = { "<esc>:.,1s/\\(\\\"[A-Za-z0-9_-]*\\\"[,]*\\)\\s*/\\r\\t\\1/g<CR>", desc = "Split line" },
   },
   t = {
     -- setting a mapping to false will disable it

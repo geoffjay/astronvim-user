@@ -26,7 +26,7 @@ vim.api.nvim_create_augroup("ruby_save", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
   pattern = "*.rb,*.jbuilder,*.rake",
   group = "ruby_save",
-  command = ":!rubocop --auto-correct %"
+  command = ":!bundle exec rubocop --auto-correct %"
 })
 
 -- Add xit filetype
