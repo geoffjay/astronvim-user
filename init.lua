@@ -18,30 +18,6 @@ return {
     -- },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "kanagawa",
-  -- other options:
-  --  * tokyonight
-  --  * tokyonight-night/storm/moon
-  --  * kanagawa
-  --  * kanagawa-wave/dragon/lotus
-  --  * nord
-  --  * onenord
-  --
-  --  tokyonight-night & kanagawa-wave (preferred by remote ppl)
-
-  -- Add highlight groups in any theme
-  highlights = {
-    -- init = { -- this table overrides highlights in all themes
-    --   Normal = { bg = "#000000" },
-    -- }
-    onenord = { -- a table of overrides/changes to the onenord theme
-      CopilotSuggestion = {
-        fg = "#B48EAD",
-      },
-    },
-  },
-
   -- Default theme configuration
   default_theme = {
     -- Modify the color palette for the default theme
@@ -191,6 +167,11 @@ return {
 
     vim.api.nvim_command([[
       au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+    ]])
+
+    -- autocmds aren't being loaded from the config file for some reason so this is here for now
+    vim.api.nvim_command([[
+      au BufNewFile,BufRead *.tmpl set ft=gohtmltmpl
     ]])
 
     vim.cmd([[silent! autocmd! filetypedetect BufRead,BufNewFile *.tf]])

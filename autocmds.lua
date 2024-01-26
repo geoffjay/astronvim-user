@@ -59,3 +59,11 @@ vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
   group = "elixir_filetype",
   command = "set filetype=elixir"
 })
+
+-- Add gohtmltmpl filetype
+vim.api.nvim_create_augroup("gohtmltmpl_filetype", { clear = true })
+vim.api.nvim_create_autocmd("BufRead,BufNewFile,BufReadPost", {
+  pattern = "*.tmpl",
+  group = "gohtmltmpl_filetype",
+  command = "set filetype=gohtmltmpl"
+})
